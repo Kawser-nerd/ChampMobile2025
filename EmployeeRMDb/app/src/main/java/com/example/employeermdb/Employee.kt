@@ -6,9 +6,9 @@ import androidx.room.PrimaryKey
 @Entity(tableName = "employee_table")
 data class Employee(
     @PrimaryKey(autoGenerate = true)
-    val id:Int = 100, // initial employee id
-    val name:String,
-    val age:Int,
-    val gender:Boolean,
-    val city:String
+    val id: Int = 0, // Changed from 100 to 0 to allow Room to auto-generate
+    val name: String,
+    val age: Int,
+    val gender: Boolean, // true for male, false for female
+    val city: String
 )
